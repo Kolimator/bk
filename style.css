@@ -26,23 +26,45 @@ body {
 .navigation div {
     border-right: 3px solid lightgray;
 
+    display: grid;
+
     text-align: center;
 
 
     font-size: 24px;
+    grid-template-columns: 1fr 1fr;
 
-    vertical-align:middle;
 }
+
+.navigation div>*{
+    align-self: center;
+}
+
 .navigation div:hover{
     transform: translate(20px);
 }
 
 
-.footer{
+footer{
     border: 3px solid black;
     grid-area: footer;
-}
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
+}
+.owner{
+    padding-left: 10px;
+}
+.owner:before{
+    display: block;
+    content: '';
+    width: 2px;
+    height: 80px;
+    background: black;
+    position:absolute ;
+    margin-right: 10px;
+
+}
 #logo{
     grid-area: logo;
     align-self: center;
@@ -53,10 +75,21 @@ body {
     font-size: 80px;
     align-self: center;
     justify-self: center;
-    border-bottom: 3px solid lightgray ;
+
+
 
 }
 .content{
     grid-area: content;
 }
+
+.leftPaw{
+    font-size: 20px;
+    position: relative;
+}
+
+.rightPaw{
+
+}
+
 
