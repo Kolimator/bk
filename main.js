@@ -1,8 +1,16 @@
-function KittyPaw() {
-    let container = document.querySelector(".content")
-let paw = document.createElement("i")
- let classPaw =   paw.classList.add("kittyPaw ")
-   console.log( container.appendChild(classPaw))
+let catArray=[]
+for(let i=0;i<10;i++){
+    fetch("https://cataas.com/cat").then(resp => {
+        catArray.push(resp.url)
+    })
 }
+console.log(catArray)
+console.log(catArray.map(elem =>{
+     elem = {
+        adress : elem.url,
+        description: "Cat"
 
-KittyPaw();
+    }
+    return elem
+}))
+

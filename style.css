@@ -12,6 +12,12 @@ body {
         "sidebar content"
         "footer footer";
 
+
+}
+
+header{
+
+
 }
 
 .navigation{
@@ -42,29 +48,33 @@ body {
 
 .navigation div:hover{
     transform: translate(20px);
+
+}
+.navigation div:hover i{
+    color: red;
 }
 
 
 footer{
-    border: 3px solid black;
+    border-top: 1px solid lightgray;
     grid-area: footer;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-weight: bold;
 
 }
 .owner{
     padding-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
 }
-.owner:before{
-    display: block;
-    content: '';
-    width: 2px;
-    height: 80px;
-    background: black;
-    position:absolute ;
-    margin-right: 10px;
+.social{
+    font-size: 40px;
+}
 
-}
 #logo{
     grid-area: logo;
     align-self: center;
@@ -75,21 +85,43 @@ footer{
     font-size: 80px;
     align-self: center;
     justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    align-content: center;
+    width: 100%;
 
 
 
+}
+#title p {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .content{
     grid-area: content;
 }
 
 .leftPaw{
-    font-size: 20px;
-    position: relative;
+
 }
 
 .rightPaw{
 
 }
 
+#paw1{
+    color: red;
+    animation: paw1 4s linear infinite;
+
+
+}
+@keyframes paw1 {
+
+}
+#paw2{
+    color: cyan;
+}
+#paw3{color: aquamarine}
+#paw4{color: blue}
 
