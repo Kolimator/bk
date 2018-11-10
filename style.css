@@ -15,10 +15,7 @@ body {
 
 }
 
-header{
 
-
-}
 
 .navigation{
     grid-area: sidebar;
@@ -90,38 +87,65 @@ footer{
     align-items: center;
     align-content: center;
     width: 100%;
+    grid-gap: 20px;
 
 
 
 }
-#title p {
-    margin-left: 10px;
-    margin-right: 10px;
+.right-header{
+    justify-self: end;
 }
+
 .content{
     grid-area: content;
 }
 
-.leftPaw{
 
+.leftPaw{
+    
 }
 
 .rightPaw{
-
+    animation: paw-R 4s linear infinite;
 }
 
 #paw1{
     color: red;
-    animation: paw1 4s linear infinite;
+    animation-name: pawl;
+    animation-duration: 4s;
+    opacity: 0;
+    animation-iteration-count: 1;
 
 
 }
-@keyframes paw1 {
+@keyframes pawl {
+    0%{opacity: 0}
+    25% {opacity: .25}
+    50% {opacity: .5}
+    75% {opacity: .75}
+    100%{opacity: 1}
+    }
 
-}
 #paw2{
+
     color: cyan;
+    animation-name: pawl;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    opacity: 0;
 }
-#paw3{color: aquamarine}
-#paw4{color: blue}
+#paw3{
+    color: aquamarine;
+    animation-name: pawl;
+    animation-duration: 4s;
+    animation-delay: 4s;
+    opacity: 0;
+}
+#paw4{
+    color: blue;
+    animation-name: pawl;
+    animation-duration: 4s;
+    animation-delay: 6s;
+    opacity: 0;
+}
 
